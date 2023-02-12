@@ -113,3 +113,8 @@ font-family: system-ui;
     filter: contrast(0.7);
     color: #03a9f4d4;
 }
+@media(max-width: 600px) {
+  .py_main{
+    width:100%;
+  }
+}

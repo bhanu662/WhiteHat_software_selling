@@ -79,7 +79,7 @@ position: absolute;
 }
 .name{
 position: absolute;
-    top: 16%;
+    top: 15%;
     margin-left: 15%;
     font-weight: bold;
     filter: contrast(0.7);
@@ -97,7 +97,7 @@ font-family: system-ui;
 .pris{
 	font-family: system-ui;
     position: absolute;
-        top: 25.2%;
+        top: 24%;
     left: 44%;
     font-size: 31.5px;
     font-weight: bold;
@@ -117,4 +117,8 @@ font-family: system-ui;
   .py_main{
     width:100%;
   }
+}
+.name:hover{
+	    resize: both;
+    overflow: auto;
 }

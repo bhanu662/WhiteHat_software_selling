@@ -11,8 +11,9 @@ background-image:url("paytm.jpg");
 background-size: 100%;
 }
 </style>
-<div class="main">
-<div class="py_main">
+
+<div class="main" id="dc">
+<div class="py_main" id="full">
 
 <p class="lg" contenteditable="true">B</p>
 <p class="name" contenteditable="true">Rahul pratap singh</p>
@@ -28,6 +29,16 @@ background-size: 100%;
 <div class="box"></div>
 <div class="bottom"></div>
 --->
+<script>
+var a=document.getElementById("full");
+var b=document.getElementById("dc");
+a.addEventListener("click",fp);
+function fp(){
+
+b.requestFullscreen();
+console.log("hell");
+	
+}</script>
 </div>
 </div>
 </body>

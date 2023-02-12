@@ -95,19 +95,19 @@ font-family: system-ui;
 	color:#fff;
 }
 .pris{
-	font-family: system-ui;
+	    font-family: system-ui;
     position: absolute;
-        top: 24%;
+    top: 22.9%;
     left: 44%;
-    font-size: 31.5px;
+    font-size: 35px;
     font-weight: bold;
     filter: contrast(0.7);
 }
 .time{
 	font-family: system-ui;
     position: absolute;
-    top: 41%;
-    left: 35%;
+    top: 38%;
+    left: 38%;
     font-size: 12.3px;
     font-weight: bold;
     filter: contrast(0.7);

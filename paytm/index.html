@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Convert Image to PDF</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+	
+  </head>
+  <body>
+    <img id="myImage" src="logo.png" alt="My Image">
+    <button onclick="convertToPDF()">Convert to PDF</button>
+    <script>
+      function convertToPDF() {
+        // create a new jsPDF instance
+        var doc = new jsPDF();
+      
+        // load your image using an Image object
+        var img = new Image();
+        img.src = document.getElementById('myImage').src;
+      
+        // wait for the image to load
+        img.onload = function() {
+          // define the width and height of your image
+          var width = this.width;
+          var height = this.height;
+          
+          // add the image to the PDF document
+          doc.addImage(this, 'PNG', 10, 10, width, height);
+      
+          // save the PDF document
+          doc.save('myImage.pdf');
+        };
+		
+      }
+    </script>
+		
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-       <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
-</head>
-
-<body>
-
-<div id="mydiv">
-<h1>Test Div title</h1>
-<p> this should export to PDF</p>
-
-</div>
-<button onclick="pdf()">Print PDF</button>
-
-<script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
-
-<script>
-
-function pdf(){
-    let srcwidth = document.getElementById('mydiv').scrollWidth;
-    let pdf = new jsPDF('p', 'pt', 'a4');
-    pdf.html(document.getElementById('mydiv'), {
-        html2canvas: {
-            scale: 600 / srcwidth
-            //600 is the width of a4 page. 'a4': [595.28, 841.89]
-        },
-        callback: function () {
-            window.open(pdf.output('my_pdf_test'));
-        }
-    });
-    alert("pdf done");
-    }
-</script>
- </body>
+  </body>
+</html>
